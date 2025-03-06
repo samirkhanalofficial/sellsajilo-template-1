@@ -1,0 +1,22 @@
+export type bookingType = {
+  fname: string;
+  lname: string;
+  address: string;
+  phone: string;
+  email: string;
+  product: string;
+  vendor: string;
+  price: number;
+  discount: number;
+  priceAfterDiscount: number;
+  profit: number;
+  qty: number;
+  domain: string;
+  bookingStatus: string;
+  paymentStatus: "UNPAID" | "PAID";
+  paymentMethod: "COD" | "KHALTI";
+  _id: string;
+  isDeleted: boolean;
+  createdAt: string;
+  updatedAt: string;
+};
