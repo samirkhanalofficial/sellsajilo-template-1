@@ -32,7 +32,7 @@ export default async function Product({
           <br />
           <div className="flex gap-x-4">
             <span className="px-3 py-3 bg-black text-white rounded-md">
-              Stocks: {!product.unlimitedStocks ? "unlimited" : product.stocks}
+              Stocks: {product.unlimitedStocks ? "unlimited" : product.stocks}
             </span>
           </div>
           <br />
