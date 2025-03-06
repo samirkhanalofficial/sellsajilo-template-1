@@ -1,21 +1,18 @@
 import { headers } from "next/headers";
-import { URL } from "url";
 
 export async function getHostName(): Promise<string> {
   const headerList = await headers();
 
-  const path = headerList.get("referer");
-  console.log(path);
-
-  const url = new URL(path ?? "http://localhost:3000");
-  return url.hostname;
+  const host = headerList.get("Host");
+  console.log(host);
+  return host ?? "localhost";
 }
 
-export async function getPathName(): Promise<string> {
-  const headerList = await headers();
+// export async function getPathName(): Promise<string> {
+//   const headerList = await headers();
 
-  const path = headerList.get("referer");
-  console.log(path);
-  const url = new URL(path ?? "http://localhost:3000");
-  return url.pathname;
-}
+//   const path = headerList.get("content-location");
+//   console.log("path", path);
+//   const url = new URL(path ?? "http://localhost:3000");
+//   return '/';
+// }

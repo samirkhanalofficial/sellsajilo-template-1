@@ -35,6 +35,7 @@ export default async function RootLayout({
 }>) {
   const hostname = await getHostName();
   const company = await getCompanyData(hostname);
+  if (!company) return <h2>Sell sajilo</h2>;
 
   return (
     <html lang="en">
